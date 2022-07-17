@@ -7,13 +7,13 @@ import { debounce } from 'lodash'
 import { CITY_API_URL, CITY_API_OPTIONS } from '../services/API';
 
 
-function Search(onSearchChange) {
-    //const select_tag = useRef(null);
-    //const [search,setSearch] = useState("rahul");
-    function handleOnChange(data) {
-        //setSearch(data);
-        //onSearchChange(data);
-        console.log(data);
+function Search({ onSearchChange }) {
+    const [search, setSearch] = useState(null);
+    const handleOnChange = (data) => {
+        setSearch(data);
+        //onSearchChange.onSearchChange(data);
+        onSearchChange(data);
+
     }
     async function loadOptions(inputData) {
         const url = `${CITY_API_URL}?namePrefix=${inputData}`
@@ -45,6 +45,7 @@ function Search(onSearchChange) {
     return <div className="app-search">
         <Async
             placeholder="Search any city...."
+            value={search}
             loadOptions={debounce(loadOptions, 800)}
             onChange={handleOnChange}
         />

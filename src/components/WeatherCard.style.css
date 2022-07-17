@@ -1,0 +1,79 @@
+.app-weather-card{
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0px;
+    align-self: center;
+    width: 600px;
+    border-radius: 15px;
+    box-shadow:12px -5px rgb(0 0 0 / 20%);
+    color: white;
+}
+
+.weather-card-left-pane{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    margin: 10px 10px;
+}
+
+.city-weather-details{
+    margin: 10px 10px 50px 10px;
+    padding: 10px;
+    
+}
+.city-weather-degree{
+    margin: 0px 10px;
+    padding: 10px;
+    
+    align-self: center;
+}
+
+.city-weather-details #city{
+    font-size: 20px;
+    font-weight: bold;
+}
+.city-weather-degree #weather-degree{
+    margin-top: 30px;
+    font-size: 70px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.weather-card-right-pane {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    margin: 10px;
+}
+.weather-image-info{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+ .weather-image-info #weather-image{
+        height: 140px;
+        padding: 10px;
+}
+
+.weather-detail-record{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+    line-height: 10px;
+    padding: 5px;
+
+}
+.weather-detail-record .weather-record-name{
+    justify-content: flex-start;
+}
+
+.weather-detail-record .weather-record-value{
+    align-items: right;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
