@@ -1,2 +1,2 @@
 # WeatherReactApp
-Making weather checking react app for any city
+Weather checking react app for any city
